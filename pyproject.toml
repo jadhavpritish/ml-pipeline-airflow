@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "ml-pipeline-airflow"
+version = "0.1.0"
+description = "Building ML pipeline from data to deployment using Airflow"
+authors = ["Pritish J"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "3.11.6"
+virtualenv = "*"
+pendulum = "<3"
+apache-airflow = "==2.9.1"
+pandas = "*"
+numpy = "*"
+scikit-learn = "*"
+opendatasets = "*"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+pytest = "*"
+isort = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
