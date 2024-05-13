@@ -87,3 +87,8 @@ share/
 
 # Kaggle
 kaggle.json
+
+# Airflow
+airflow.db
+airflow.cfg
+webserver_config.py

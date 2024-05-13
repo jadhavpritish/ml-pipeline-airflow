@@ -2,7 +2,8 @@ SHELL := /bin/bash
 
 .PHONY = init clean
 
-LABS_LAUNCH_DIRECTORY?=$$(pwd)
+AIRFLOW_HOME ?= $$(pwd)
+AIRFLOW_DAGS_DIRECTORY ?= $$(pwd)/dags
 
 clean: ## Clean
 
@@ -17,5 +18,15 @@ init: clean
 	poetry install
 
 format:
+	@echo "AIRFLOW_HOME = ${AIRFLOW_HOME}"
+	@echo "AIRFLOW_DAGS_DIRECTORY = ${AIRFLOW_DAGS_DIRECTORY}"
 	poetry run isort .
 	poetry run black .
+
+
+run-local:
+	AIRFLOW_HOME=$(pwd) poetry run airflow webserver & SERVER_PID=$$!
+	AIRFLOW_HOME=$(pwd) poetry run airflow scheduler & SCHEDULER_PID=$$!
+
+kill-local:
+	pkill airflow
