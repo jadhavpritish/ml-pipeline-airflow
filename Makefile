@@ -25,8 +25,7 @@ format:
 
 
 run-local:
-	AIRFLOW_HOME=$(pwd) poetry run airflow webserver & SERVER_PID=$$!
-	AIRFLOW_HOME=$(pwd) poetry run airflow scheduler & SCHEDULER_PID=$$!
+	sh ./startup.sh
 
 kill-local:
 	pkill airflow
