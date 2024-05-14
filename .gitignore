@@ -92,3 +92,7 @@ kaggle.json
 airflow.db
 airflow.cfg
 webserver_config.py
+
+# Pickle
+*.pkl
+*.pickle

@@ -6,7 +6,6 @@ AIRFLOW_HOME ?= $$(pwd)
 AIRFLOW_DAGS_DIRECTORY ?= $$(pwd)/dags
 
 clean: ## Clean
-
 	# git gc is really just minor tidying - https://git-scm.com/docs/git-gc
 	git gc --aggressive
 
@@ -18,8 +17,6 @@ init: clean
 	poetry install
 
 format:
-	@echo "AIRFLOW_HOME = ${AIRFLOW_HOME}"
-	@echo "AIRFLOW_DAGS_DIRECTORY = ${AIRFLOW_DAGS_DIRECTORY}"
 	poetry run isort .
 	poetry run black .
 

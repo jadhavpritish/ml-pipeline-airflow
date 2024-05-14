@@ -15,6 +15,7 @@ pandas = "*"
 numpy = "*"
 scikit-learn = "*"
 opendatasets = "*"
+pyarrow = "*"
 
 [tool.poetry.dev-dependencies]
 black = "*"
