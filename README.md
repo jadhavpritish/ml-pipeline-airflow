@@ -44,9 +44,9 @@ This will do three things:
 Open Airflow Locally:
 
 Head over to the browser and enter: `http://localhost:8080/`
-![Screenshot 2024-05-15 at 3.20.13 PM.png]()
+![Screenshot 2024-05-15 at 3.20.13 PM.png](airflow_signin_screenshot.png)
 
 Enter username as `admin` and password as `admin` to login. 
 
 After logging in, you should be able to see the `mobile_price_model_trainer` DAG under the `Active` Tab. Click into it to trigger the DAG. 
-![Screenshot 2024-05-15 at 3.21.05 PM.png]()
+![Screenshot 2024-05-15 at 3.21.05 PM.png](airflow_dashboard_screenshot.png)
